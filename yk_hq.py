@@ -34,7 +34,7 @@ class YouKu:
         md.update(sign.encode('UTF-8'))
         sign = md.hexdigest()
         return sign
-
+    # 获取cookie中的utid web与client的不通用
     def utid(self):
         json_cookie = requests.cookies.get_dict()
         requests.cookies.clear()
